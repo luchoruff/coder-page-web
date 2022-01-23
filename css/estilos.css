@@ -1,0 +1,232 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #c8d6e5;
+  display: grid;
+  grid-template-areas: "header header header"
+                        "cuerpo cuerpo cuerpo" 
+                        "footer footer footer "  ;
+
+}
+span{
+  padding-left: 66px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: header;
+  background-color: #2f3542;
+  
+}
+
+.header__h1 {
+  width: 300px;
+  height: 20px;
+  padding: 45px;
+  margin: 20px auto;
+  /* display: inline-block; */
+  font-style: italic;
+  font-family: serif;
+  /* position: relative; */
+  /* left: 500px; */
+  text-align: center;
+}
+
+.fondonav{
+  position: absolute;
+  z-index: -1;
+
+}
+ 
+.logopiola{
+  width: 250px;
+  height: auto;
+  /* position: absolute;
+  left: 0px;
+  top: -40px; */
+}
+
+.nav__links {
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap ;
+  color: darkgray;
+  font-weight: bold;
+  font-family: monospace;
+  list-style: none;
+  
+}
+.nav__links li{
+  padding: 10px 20px;
+}
+.nav__links li:hover a{
+  background:#ced6e0 ;
+  color: black;
+  border-radius: 30px;
+  transition-property:all;
+  transition-duration: 1.5s;
+}
+
+.nav__links a{
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200px;
+  padding: 25px 50px;
+}
+
+.main__h2{
+  text-align: center;
+  /* width: calc(100% - 25px); */
+}
+
+
+
+.footer {
+  background-color: #c8d6e5;
+  font-family: sans-serif;
+  font-style:italic ;
+  /* position: absolute; */
+  width: 100%;
+  bottom: 0;
+  height: 20px;
+  text-align: center;
+  grid-area: footer;
+}
+
+/* css de servicios */
+.ulservis{
+  font-style: italic;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+flex-wrap: wrap;
+text-align: center;
+}
+
+.ulservis li{
+ width: 100%;
+ padding-bottom: 10px;
+ list-style: none;
+ text-decoration: underline;
+ transition:  .8s;
+}
+
+.ulservis li:hover{
+transform: scale(1.5);
+}
+
+/* css de cotizacion */
+.formcoti{
+  font-style:italic;
+  display: flex;
+ align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  padding: 40px;
+}
+.formcoti p{
+  display: inline;
+  margin-left: 10px;
+}
+
+/* css de contacto */
+.subp{
+  font-family: cursive;
+  padding-top: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.contenedorico{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
+.icono{
+  cursor: pointer;
+  padding: 60px 50px;
+  font-size: 100px;
+  transition: 1s;
+}
+
+.icono:hover{
+  transform: scale(1.5);
+}
+
+/* css de sucu */
+.mapa{
+  width: 500px;
+  height: 250px;
+  justify-content: center;
+  display: flex;
+  
+  
+}
+.cuerpo{
+  grid-area: cuerpo;
+}
+
+.caja-texto{
+  display:flex;
+  justify-content: center;
+}
+
+.main__parrafo{
+  width: 33%;
+  margin-top: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
+  text-align: justify;
+  background-color: #95afc0;
+  color: black;
+  padding: 15px;
+  border-radius: 25px;
+  transition: all 1s;
+}
+
+.main__parrafo:hover{
+  cursor:pointer ;
+  font-size: 18px;
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:1080px) {
+  body{
+    background-color: coral;
+  }
+  .main__parrafo{
+    width: 80%;
+    margin: 50px 0px;
+  }
+  .caja-texto{
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 550px ){
+  .header{
+    flex-wrap: wrap;
+  }
+}
